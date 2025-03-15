@@ -1,0 +1,12 @@
+<p>todo-list works!</p>
+<h1>Todo List</h1>
+
+<ul>
+  <li *ngFor="let todo of todos">
+    {{ todo.title }}
+    <button (click)="deleteTodo(todo.id)">Delete</button>
+    <a [routerLink]="['/edit', todo.id]">Edit</a>
+  </li>
+</ul>
+
+<a routerLink="/create">Add New Todo</a>

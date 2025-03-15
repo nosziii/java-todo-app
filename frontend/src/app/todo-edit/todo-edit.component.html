@@ -1,0 +1,37 @@
+<p>todo-edit works!</p>
+<h1>Edit Todo</h1>
+
+<form (ngSubmit)="updateTodo()">
+  <div>
+    <label for="title">Title:</label>
+    <input
+      type="text"
+      id="title"
+      name="title"
+      [(ngModel)]="todo.title"
+      required
+    />
+  </div>
+  <div>
+    <label for="description">Description:</label>
+    <textarea
+      id="description"
+      name="description"
+      [(ngModel)]="todo.description"
+    ></textarea>
+  </div>
+  <div>
+    <label for="dueDate">Due Date:</label>
+    <input type="date" id="dueDate" name="dueDate" [(ngModel)]="todo.dueDate" />
+  </div>
+  <div>
+    <label for="completed">Completed:</label>
+    <input
+      type="checkbox"
+      id="completed"
+      name="completed"
+      [(ngModel)]="todo.completed"
+    />
+  </div>
+  <button type="submit">Update</button>
+</form>
