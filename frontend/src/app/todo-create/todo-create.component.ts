@@ -2,11 +2,16 @@ import { Component } from '@angular/core';
 import { TodoService } from '../todo.service';
 import { Todo } from '../todo.model';
 import { Router } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-create',
   templateUrl: './todo-create.component.html',
   styleUrls: ['./todo-create.component.scss'],
+  standalone: true,
+  imports: [FormsModule, RouterModule, CommonModule],
 })
 export class TodoCreateComponent {
   todo: Todo = {

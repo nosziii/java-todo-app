@@ -7,6 +7,12 @@ import { TodoEditComponent } from './todo-edit/todo-edit.component';
 export const routes: Routes = [
   { path: '', component: TodoListComponent },
   { path: 'create', component: TodoCreateComponent },
-  { path: 'edit/:id', component: TodoEditComponent },
+  {
+    path: 'edit/:id',
+    component: TodoEditComponent,
+    data: {
+      getPrerenderParams: () => [],
+    },
+  },
   { path: '**', redirectTo: '' }, // Ha semmi nem egyezik, irányítson a főoldalra
 ];

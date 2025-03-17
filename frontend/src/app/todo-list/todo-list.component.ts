@@ -1,11 +1,16 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../todo.service';
 import { Todo } from '../todo.model';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
+  standalone: true,
+  imports: [FormsModule, RouterModule, CommonModule],
 })
 export class TodoListComponent implements OnInit {
   todos: Todo[] = [];

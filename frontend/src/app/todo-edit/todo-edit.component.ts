@@ -3,11 +3,16 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { TodoService } from '../todo.service';
 import { Todo } from '../todo.model';
 import { Observable, of } from 'rxjs';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-todo-edit',
   templateUrl: './todo-edit.component.html',
   styleUrls: ['./todo-edit.component.scss'],
+  standalone: true,
+  imports: [FormsModule, RouterModule, CommonModule],
 })
 export class TodoEditComponent implements OnInit {
   todo: Todo = {
