@@ -1,14 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { TodoService } from '../todo.service';
 import { Todo } from '../todo.model';
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
   styleUrls: ['./todo-list.component.scss'],
-  imports: [CommonModule],
-  standalone: true,
 })
 export class TodoListComponent implements OnInit {
   todos: Todo[] = [];
